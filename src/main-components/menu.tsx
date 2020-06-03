@@ -1,14 +1,20 @@
 import { menu } from "@core";
 import * as core from "@core";
 import { observer } from "mobx-react";
-import { Icon, Nav, Panel, PanelType, TooltipHost } from "office-ui-fabric-react";
 import * as React from "react";
+import {
+	Icon,
+	Nav,
+	Panel,
+	PanelType,
+	TooltipHost,
+} from "office-ui-fabric-react";
 
 class Version extends React.Component {
 	render() {
 		return (
 			<div className="ver">
-				apexo
+				CMLab
 				<br /> <span>--VERSION--</span>
 			</div>
 		);
@@ -22,7 +28,7 @@ export class MenuView extends React.Component {
 			<div className="menu-component">
 				<Version />
 				<div className="visible-lg visible-md icon-list">
-					{menu.sortedItems.map(item => {
+					{menu.sortedItems.map((item) => {
 						const pageDisplayName = item.name;
 						return (
 							<TooltipHost
@@ -34,8 +40,8 @@ export class MenuView extends React.Component {
 								directionalHint={12}
 								tooltipProps={{
 									calloutProps: {
-										className: "menu-item-tt"
-									}
+										className: "menu-item-tt",
+									},
 								}}
 							>
 								<div
@@ -66,17 +72,17 @@ export class MenuView extends React.Component {
 					<Nav
 						groups={[
 							{
-								links: core.menu.sortedItems.map(x => {
+								links: core.menu.sortedItems.map((x) => {
 									return {
 										icon: x.icon,
 										name: x.name,
 										title: x.name.toLocaleLowerCase(),
 										key: x.key,
 										url: x.url,
-										onClick: x.onClick
+										onClick: x.onClick,
 									};
-								})
-							}
+								}),
+							},
 						]}
 						selectedKey={core.router.currentNamespace}
 						className="main-nav"
