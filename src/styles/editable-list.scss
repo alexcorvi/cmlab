@@ -1,0 +1,31 @@
+@import "./global-styles/shadows.scss";
+
+.elc-c {
+	.new-item {
+		margin-bottom: -1.5px !important;
+		border-bottom: 0;
+		.ms-TextField-suffix {
+			button {
+				background: transparent;
+			}
+		}
+	}
+	.items {
+		border: 1.5px solid #8a8886;
+		border-radius: 0 0 2px 2px;
+	}
+	.ms-DetailsRow-cell {
+		margin: 0;
+		padding: 0;
+		.ms-TextField {
+			margin-bottom: 0 !important;
+			.ms-TextField-fieldGroup {
+				border: 0;
+			}
+		}
+		border-top: 1px solid #f1f1f1;
+		textarea {
+			resize: none;
+		}
+	}
+}

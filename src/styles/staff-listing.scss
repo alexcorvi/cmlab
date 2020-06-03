@@ -1,0 +1,56 @@
+@import "./global-styles/shadows.scss";
+
+@media screen and (max-width: 800px) {
+	.staff-component {
+		padding: 10px;
+	}
+}
+
+.staff-editor {
+	.staff-input {
+		margin-bottom: 15px;
+		label:not(.ms-Checkbox-label) {
+			padding-bottom: 5px;
+			display: block;
+		}
+	}
+
+	.ms-Checkbox {
+		display: inline-block;
+		margin-right: 5px;
+		margin-bottom: 5px;
+		border: 1px solid #ececec;
+		min-width: 70px;
+		text-align: left;
+		padding: 5px;
+	}
+
+	.ms-Checkbox-text {
+		font-size: 12px;
+	}
+}
+
+.duty-table {
+	tr {
+		border: 1px solid #eeeeee;
+		border-top: 0;
+	}
+}
+
+.appointments-listing {
+	padding-top: 13px;
+	padding-bottom: 20px;
+}
+
+.panel-heading {
+	padding: 15px 25px;
+	background: #fff;
+	z-index: 9999;
+	.close {
+		text-align: right;
+	}
+	> .ant-row {
+		bottom: 5px;
+		margin-bottom: 2px;
+	}
+}

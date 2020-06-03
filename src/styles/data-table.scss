@@ -1,0 +1,130 @@
+@import "./global-styles/shadows.scss";
+
+.data-table {
+	.row-actions {
+		padding-right: 0;
+		text-align: center;
+		width: 50px;
+		padding-left: 0;
+		background: #f8f9fb;
+		border-right: 1px solid #e8effd;
+		cursor: pointer;
+		display: table-cell !important;
+		&:hover {
+			background: #eceff4;
+		}
+	}
+	.dt-msg-bar {
+		background: #f8f9fb;
+	}
+	.commandBar.fixed {
+		position: fixed;
+		width: calc(100% - 66px);
+		top: 50px;
+		left: 66px;
+		z-index: 1;
+	}
+	.ms-CommandBar {
+		box-sizing: content-box;
+		background-color: #fff !important;
+		border-bottom: 1px solid #e9f0fd;
+		margin-top: -2px;
+		padding-bottom: 1px;
+	}
+
+	.ms-table {
+		margin-top: 94px;
+		background: #fafafa;
+		td.clickable {
+			cursor: pointer;
+			&:hover {
+				background: #f8f9fb;
+				border-bottom: 2px solid #e9f0fd;
+			}
+		}
+		td.no-label {
+			text-align: left;
+		}
+	}
+
+	tr {
+		border-bottom: 2px solid #f8f9fb;
+	}
+
+	.ms-SearchBox {
+		border: none;
+		margin-top: 6px;
+	}
+	.ms-CommandBar-secondaryCommand {
+		border-left: 1px solid #ebf2fd;
+		padding-left: 1px;
+	}
+	.ms-CommandBarItem-link {
+		background: #fff !important;
+		transition: 0.3s all;
+	}
+
+	.ms-CommandBarItem-link:hover {
+		background: #eeeeee !important;
+	}
+
+	.no-data {
+		text-align: center;
+		background: #424242;
+		padding: 15px;
+		color: #fff;
+		font-size: 13px;
+	}
+
+	.action-button {
+		background: #fff;
+		color: #212121;
+		border-radius: 3px;
+		border: 1px solid #f1f1f1;
+		margin-right: 5px;
+		margin-bottom: 5px;
+		&.delete:hover {
+			color: #fff;
+			background: #f44336;
+			border-color: #f44336;
+		}
+		&:hover {
+			border-color: #03a9f4;
+		}
+	}
+	.delete-td {
+		text-align: right;
+		padding-right: 12px;
+	}
+	.load-more {
+		background: #fff;
+		display: block;
+		width: 100%;
+		margin-top: 0;
+		padding: 35px;
+		border: 0;
+	}
+	.table-actions {
+		text-align: right;
+		.ms-TooltipHost {
+			position: relative;
+			.bubble {
+				position: absolute;
+				background: #03a9f4;
+				width: 15px;
+				height: 15px;
+				display: inline-block;
+				margin: 0;
+				padding-top: 5px;
+				text-align: center;
+				font-size: 10px;
+				line-height: 4px;
+				border-radius: 50%;
+				left: 8px;
+				top: -8px;
+				pointer-events: none;
+				color: #fff;
+			}
+		}
+	}
+}

@@ -1,0 +1,327 @@
+@import "./shadows.scss";
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-weight: 100;
+}
+
+.ms-Button--compound .ms-Button-icon {
+	padding-bottom: 8px;
+	font-size: 17px;
+}
+
+.ms-Nav-groupHeaderFontSize {
+	font-size: 14px !important;
+	font-weight: 400 !important;
+	.ms-Nav-chevron {
+		font-size: 10px !important;
+	}
+}
+
+.ms-table {
+	&.condensed-table {
+		border: 1px solid #f1f1f1;
+		th {
+			padding: 15px 8px;
+			text-align: left;
+		}
+		td {
+			&.padded {
+				padding: 8px;
+				border-top: 1px solid #f1f1f1;
+			}
+			padding: 0;
+			.ms-TextField {
+				margin-bottom: 0 !important;
+				.ms-TextField-fieldGroup {
+					border: 0;
+					border-radius: 0;
+					&:hover {
+						background: #f3f3f3;
+					}
+				}
+			}
+			.ms-Dropdown-title {
+				border: 0;
+				margin-top: 10px;
+			}
+		}
+	}
+
+	width: 100%;
+	border-collapse: collapse;
+	thead tr th {
+		text-align: left;
+	}
+	th,
+	td {
+		border: none;
+		background: #fff;
+		padding: 12px;
+		font-size: 14px;
+		border-bottom: 1px solid #f1f1f1;
+	}
+	th {
+		font-weight: 400;
+		font-size: 13px;
+		padding: 12px 15px;
+		padding-bottom: 13px;
+		background: #f8f9fb;
+		.sort-indicators .positive,
+		.sort-indicators .negative {
+			display: none;
+		}
+		&.current {
+			border-bottom: 2px solid #0078d4;
+			color: #0078d4;
+			background: #f8f9fb;
+			.sort-indicators {
+				float: right;
+			}
+			&.positive {
+				.sort-indicators .positive {
+					display: block;
+				}
+			}
+			&.negative {
+				.sort-indicators .negative {
+					display: block;
+				}
+			}
+		}
+	}
+	.table-head-sort {
+		cursor: pointer;
+		&:hover {
+			border-bottom: 2px solid #0078d4;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.ms-Panel-content {
+		padding-bottom: 40px;
+	}
+	#root {
+		padding-bottom: 40px;
+	}
+	.dental-history-toggle {
+		display: none;
+	}
+	.ms-CommandBarItem-commandText {
+		display: none !important;
+	}
+	table.responsive {
+		margin: 0;
+		padding: 0;
+		border: 1px solid transparent;
+		box-shadow: none !important;
+		thead {
+			display: none;
+		}
+		tbody {
+			tr {
+				background: #fff;
+				display: block;
+				margin: 0 auto;
+				margin-top: 15px;
+				td {
+					text-align: right;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+.ms-Persona.treatment-link.ms-Persona--xxs {
+	height: 25px;
+	.ms-Persona-primaryText {
+		font-size: 12px;
+	}
+}
+
+.ms-Button--primary {
+	border-radius: 2px;
+	transition: 0.4s all;
+	&:hover {
+		@include box_shadow(3);
+	}
+	&.delete {
+		background: #f44336;
+		&:hover {
+			background: #c62828;
+		}
+	}
+}
+
+.ms-Toggle-stateText {
+	position: relative;
+	top: 2px;
+}
+
+.ms-Dropdown-container {
+	margin-bottom: 10px;
+}
+
+.ms-TextField {
+	margin-bottom: 10px !important;
+}
+
+.ms-Panel-content {
+	height: 100%;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 10px;
+	padding-bottom: 45px;
+	overflow-y: auto;
+}
+
+html,
+body {
+	overflow-x: hidden !important;
+	&.has-panel {
+		overflow: hidden;
+	}
+}
+
+body {
+	font-family: "Segoe UI WestEuropean";
+	line-height: 1;
+	height: auto;
+}
+
+hr {
+	border: none;
+	margin-bottom: 20px;
+	border-top: 1px solid #e0e0e0;
+}
+
+.hidden {
+	display: none;
+}
+
+.version-num {
+	font-size: 12px;
+	position: absolute;
+	color: rgb(227, 227, 227);
+	bottom: 5px;
+	right: 12px;
+	z-index: -1;
+}
+
+.ex-pnl {
+	.ms-Panel-main {
+		width: 100% !important;
+		left: 0 !important;
+
+		.ms-Panel-content {
+			padding-top: 70px;
+			margin-top: -70px;
+			height: 100vh;
+
+			iframe {
+				height: 100%;
+				width: 100%;
+				border: 0;
+			}
+		}
+	}
+}
+
+.ms-Tooltip {
+	pointer-events: none;
+}
+
+.ms-TooltipHost,
+.ms-Persona-details,
+.ms-Layer,
+.ms-TextField-field {
+	line-height: initial;
+}
+
+.ms-Persona-initials i {
+	font-weight: 100;
+}
+
+.ms-TextField-prefix,
+.ms-TextField-suffix {
+	margin: 1px;
+}
+
+.ms-Toggle-stateText {
+	line-height: 1;
+}
+
+.thumb {
+	min-height: 150px;
+	background-size: cover;
+	margin-right: 5px;
+	margin: 0 auto;
+	display: block;
+	border: 1px solid #918f8e;
+	border-radius: 3px;
+	padding: 10px;
+	position: relative;
+	.thumb-btns {
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		button {
+			background: #fff;
+			border: 1px solid;
+			color: #3f51b5;
+			margin-left: 5px;
+		}
+	}
+	img {
+		max-width: 100%;
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+.stats-filter {
+	padding-left: 7px;
+}
+
+.ms-CommandBar .tag-input-component {
+	margin-top: 7px;
+	display: inline-block;
+	margin-left: 5px;
+}
+.sub-text {
+	font-size: 12px;
+	background: #e8effd;
+	padding: 5px;
+	margin-top: 5px;
+	border-radius: 3px;
+	display: block;
+	&.red {
+		background: #ffebee;
+	}
+	&.green {
+		background: #b2dfdb;
+	}
+	&.gray {
+		background: #eceff1;
+	}
+	&.yellow {
+		background: #ffe082;
+	}
+	&.blue {
+		background: #bbdefb;
+	}
+	&.brown {
+		background: #d7ccc8;
+	}
+	&.orange {
+		background: #ffccbc;
+	}
+	&.violet {
+		background: #e1bee7;
+	}
+}

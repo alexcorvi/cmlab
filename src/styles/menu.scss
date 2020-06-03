@@ -1,0 +1,113 @@
+@import "./global-styles/shadows.scss";
+
+.menu {
+	.ms-Panel-contentInner {
+		background: #f8f9fb;
+	}
+	.ms-Panel-content {
+		padding: 0;
+		width: 90%;
+		margin: 0 auto;
+		padding-top: 5px;
+	}
+	.ms-Nav {
+		ul {
+			.is-selected {
+				.ms-Nav-link {
+					background: #fff;
+					border-radius: 5px;
+					font-weight: 400;
+					border: 1px solid #8fc7f43d;
+					box-shadow: 0 0 8px 0px #8fc7f42e;
+					&:after {
+						border: 0;
+					}
+				}
+			}
+			.ms-Nav-link {
+				text-transform: capitalize;
+				&:hover {
+					background: transparent;
+					border-radius: 5px;
+					border: 1px solid #8fc7f43d;
+					color: #0078d4;
+				}
+			}
+		}
+	}
+}
+
+.ver {
+	text-align: center;
+	font-size: 9px;
+	cursor: default;
+	padding: 5px;
+	border-radius: 50%;
+	line-height: 1.2em;
+	color: #9e9e9e;
+	position: fixed;
+	right: 2px;
+	bottom: 2px;
+	opacity: 0.4;
+	span {
+		font-size: 11px;
+		font-weight: 500;
+		padding-top: 2px;
+		display: inline-block;
+		margin-top: 2px;
+		border-top: 1px solid #e3e3e3;
+	}
+}
+
+@media (min-width: 992px) {
+	#router-outlet {
+		margin-left: 65px;
+	}
+	.icon-list {
+		position: fixed;
+		top: 50px;
+		left: 0;
+		cursor: pointer;
+		background: #f8f9fb;
+		border-right: 1px solid #e8effd;
+		height: 100%;
+		.ms-TooltipHost:nth-child(2) .item {
+			padding: 0.47em;
+		}
+		.item {
+			transition: 0.2s all;
+			padding: 0.55em 0 0.45em;
+			font-size: 17px;
+			text-align: center;
+			min-width: 45px;
+			border-bottom: 1px solid transparent;
+			margin: 3px 10px;
+			border-radius: 2px;
+			&:hover {
+				background: #dcebf7;
+			}
+			&.selected {
+				background: #0078d4;
+				color: #fff;
+				cursor: initial;
+				border: 1px solid #0078d4;
+				box-shadow: 0 0 8px 0px #0078d49c;
+			}
+			.text {
+				margin-top: 5px;
+				font-size: 11px;
+				position: relative;
+				bottom: 3px;
+				display: block;
+				text-transform: capitalize;
+			}
+		}
+	}
+}
+
+.menu-item-tt {
+	.ms-Callout-beak {
+		height: 14px !important;
+		left: -5px !important;
+	}
+}

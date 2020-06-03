@@ -1,0 +1,322 @@
+@import "./global-styles/shadows.scss";
+.calendar-component {
+	background: #fff;
+	font-size: 13px;
+	margin-top: 94px;
+
+	.appointments-toggle {
+		padding: 12px 0 0 12px;
+		.ms-Toggle-stateText {
+			font-size: 12px;
+			line-height: 14px;
+		}
+	}
+
+	.ms-CommandBar-primaryCommand {
+		& > div:not(:first-of-type) {
+			padding-top: 6px;
+			.ms-TextField-fieldGroup {
+				border: 1px solid #f3f3f3;
+				&:hover {
+					background: #f3f3f3;
+				}
+			}
+		}
+	}
+
+	.ms-CommandBar {
+		box-sizing: content-box;
+		background-color: #fff !important;
+		border-bottom: 1px solid #e9edef;
+	}
+
+	.commandBar.fixed {
+		position: fixed;
+		width: calc(100% - 66px);
+		top: 50px;
+		left: 66px;
+		z-index: 1;
+	}
+
+	.week-view {
+		i.no-appointments {
+			display: block;
+			margin: 20px 0;
+			text-align: center;
+			color: #9e9e9e;
+			padding-top: 10px;
+		}
+	}
+	.full-day-col {
+		width: 14.285%;
+		float: left;
+		padding: 3px 10px;
+		padding-top: 0;
+		min-height: 300px;
+		&:not(:last-child) {
+			border-right: 1px solid #f3f3f3;
+		}
+		&.holiday {
+			background: #fafaf7;
+		}
+		&.current {
+			h4 b {
+				border: 1px solid #03a9f4;
+			}
+		}
+		h4 {
+			margin: 0 -10px;
+			padding: 10px;
+			background: #f8f9fb;
+			b {
+				border: 1px solid transparent;
+				border-radius: 3px;
+				padding: 3px;
+				min-width: 20px;
+				display: inline-block;
+				text-align: center;
+			}
+		}
+		.appointment {
+			padding-bottom: 10px;
+			margin-bottom: 10px;
+			cursor: pointer;
+			.time {
+				color: #616161;
+				margin-bottom: 5px;
+				clear: both;
+				padding: 10px;
+				background: #fafafa;
+				margin: 0 -10px 10px;
+				border-top: 1px solid #f5f5f5;
+				color: #607d8b;
+				border-color: #607d8b;
+				transition: 0.3s all;
+				&.done,
+				&.missed {
+					color: #fff;
+					border-color: #009688;
+					opacity: 0.6;
+					color: #009688;
+				}
+				&.missed {
+					color: #e91e63;
+					border-color: #e91e63;
+				}
+			}
+			a {
+				display: inline-block;
+				color: #2196f3;
+				font-size: 12px;
+				cursor: pointer;
+				transition: 0.4s all;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+			&:hover {
+				.time {
+					background: #eeeeee;
+					color: #9e9e9e;
+					opacity: 1;
+					border-top-color: transparent;
+				}
+			}
+		}
+	}
+
+	.centered {
+		text-align: center;
+	}
+
+	.filters {
+		.filter {
+			border-left: 1px solid #f3f3f3;
+		}
+		.ms-TextField {
+			margin-top: 10px;
+		}
+		.ms-Toggle {
+			padding: 15px 0 0 15px;
+		}
+	}
+
+	.appointments-num-wrap {
+		text-align: right;
+	}
+
+	.appointments-num {
+		border-radius: 200px;
+		color: #fff;
+		display: inline-block;
+		line-height: 1.5em;
+		width: 17px;
+		height: 17px;
+		text-align: center;
+		margin-top: 2px;
+		font-size: 11px;
+		&.num-0 {
+			color: #bdbdbd;
+			background: transparent;
+		}
+		&.num-1 {
+			background: #ffebee;
+		}
+		&.num-2 {
+			background: #ffcdd2;
+		}
+		&.num-3 {
+			background: #ef9a9a;
+		}
+		&.num-4 {
+			background: #e57373;
+		}
+		&.num-5 {
+			background: #ef5350;
+		}
+		&.num-6 {
+			background: #f44336;
+		}
+		&.num-7 {
+			background: #e53935;
+		}
+		&.num-8 {
+			background: #d32f2f;
+		}
+		&.num-9 {
+			background: #c62828;
+		}
+		// more than 9
+		background: #b71c1c;
+	}
+	.appointments-overview {
+		table {
+			width: 100%;
+			padding: 10px;
+			border-collapse: collapse;
+			border-bottom: 1px solid #eee;
+
+			td,
+			th {
+				text-transform: uppercase;
+				font-size: 11px;
+				text-align: center;
+				font-weight: 400;
+				padding: 15px 0;
+				border-right: 1px solid #f5f5f5;
+				background: #e7eceeeb;
+				color: #607d8b;
+				cursor: pointer;
+				width: 40px;
+				transition: 0.3s all;
+				&:hover:not(.is-selected) {
+					background: #eff2f4;
+				}
+				&.is-weekend {
+					border-right: 1px solid #eee;
+				}
+				&.is-selected {
+					background-image: linear-gradient(
+						to left,
+						#f8f9fb,
+						#fafafa
+					);
+					cursor: initial;
+					width: 70px;
+				}
+				&.is-current {
+					border-bottom: 3px solid #0078d4;
+					border-top: 4px solid #0078d4;
+					color: #0078d4;
+				}
+				div {
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1250px) {
+	.calendar-component .full-day-col {
+		width: 33.33% !important;
+		min-height: 200px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.calendar-component .full-day-col {
+		width: 50% !important;
+		min-height: 150px;
+	}
+	.appointments-overview {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.mobile-calendar {
+		background: #fff;
+		width: 100%;
+		position: fixed;
+		top: 50px;
+		z-index: 1;
+		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+		height: 268px;
+		transition: 0.3s all;
+		&.collapsed {
+			top: -186px;
+		}
+		.ms-DatePicker-weekBackground {
+			background: #eceff1;
+		}
+		.ms-DatePicker-day--today {
+			background: #607d8b;
+		}
+		.collapse {
+			text-align: center;
+			background: #eceff1;
+			position: absolute;
+			width: 100%;
+			bottom: 0;
+			button {
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+	.calendar-component .full-day-col,
+	.calendar-component .full-day-col.selected {
+		width: 100% !important;
+		min-height: 50px;
+		h4 {
+			background: #607d8b;
+			margin: 10px 0;
+			border-radius: 3px;
+			font-weight: 400;
+			color: #fff;
+			b {
+				background: #eceff1;
+				color: #000;
+				padding: 5px;
+			}
+		}
+	}
+
+	.week-view {
+		transition: 0.3s all;
+		&.full-height {
+			margin-top: 90px;
+		}
+	}
+	.num-0 {
+		color: #607d8b !important;
+	}
+}
+
+@media (max-width: 991px) {
+	.calendar-component .commandBar.fixed {
+		left: 0 !important;
+		width: 100% !important;
+	}
+}

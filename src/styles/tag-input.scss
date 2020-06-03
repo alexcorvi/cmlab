@@ -1,0 +1,12 @@
+.tag-input-component {
+	.has-error {
+		.ms-BasePicker-text {
+			border-color: brown;
+		}
+	}
+	.error-message {
+		font-size: 12px;
+		color: brown;
+		padding-top: 5px;
+	}
+}

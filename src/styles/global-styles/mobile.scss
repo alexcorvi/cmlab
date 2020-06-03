@@ -1,0 +1,71 @@
+@media (max-width: 991px) {
+	.data-table .commandBar.fixed {
+		left: 0 !important;
+		width: 100% !important;
+	}
+}
+
+@media (max-width: 767px) {
+	#router-outlet > div {
+		padding: 0;
+	}
+
+	.commandBar {
+		margin-bottom: -1px;
+	}
+
+	.data-table tr {
+		margin-top: 0 !important;
+	}
+
+	.header-component,
+	.ms-CommandBar.fixed,
+	table.responsive tbody tr {
+		border-bottom: 1px solid #f3f3f3;
+	}
+
+	table.responsive tbody tr td:not(.no-label):before {
+		background: transparent;
+	}
+
+	.data-table tr {
+		position: relative;
+	}
+
+	.data-table .delete-td {
+		position: absolute;
+		top: 0;
+		right: 0;
+		background: transparent;
+	}
+
+	.no-data {
+		margin: 0;
+	}
+
+	.settings-component {
+		padding: 15px !important;
+	}
+
+	html body {
+		background: #fff !important;
+	}
+
+	.calendar-component .full-day-col h4 {
+		padding: 12px;
+		border-bottom: none;
+	}
+
+	.calendar-component .full-day-col .appointment a {
+		color: #000;
+	}
+
+	.statist-ics-component .quick label {
+		text-align: left !important;
+	}
+
+	.sc-pg .quick .label {
+		background: #e3e3e3 !important;
+		color: inherit;
+	}
+}
